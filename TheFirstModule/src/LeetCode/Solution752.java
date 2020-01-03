@@ -57,7 +57,7 @@ public class Solution752 {
         if (Hash.containsKey(target) || Hash.containsKey("0000")){
             return -1;
         }
-
+    
         while (!queue.isEmpty()){
             stringBuilder = queue.poll();
             flag ++;
