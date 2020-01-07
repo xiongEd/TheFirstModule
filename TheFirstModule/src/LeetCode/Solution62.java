@@ -28,7 +28,6 @@ package LeetCode;
  */
 public class Solution62 {
     public int uniquePaths(int m, int n) {
-
         int[][] res = new int[n][m];
         for (int i = 0; i < n; i ++){
             for (int j = 0; j < m; j ++){
