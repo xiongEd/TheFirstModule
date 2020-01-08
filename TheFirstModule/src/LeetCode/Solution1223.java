@@ -31,7 +31,7 @@ package LeetCode;
 rollMax.length == 6
 1 <= rollMax[i] <= 15
  */
-public class Solution1223_ {
+public class Solution1223 {
     public int dieSimulator(int n, int[] rollMax) {
         int res;
         if(n < 1)
@@ -43,7 +43,7 @@ public class Solution1223_ {
         return res;
     }
 
-    public long SolveFuncion(int n, int[] rollmax, int index, int temp){
+    private long SolveFuncion(int n, int[] rollmax, int index, int temp){
         long res = 0;
         if(temp > rollmax[index - 1])
             return 0;
