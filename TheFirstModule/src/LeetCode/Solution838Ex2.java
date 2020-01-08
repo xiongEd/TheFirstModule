@@ -38,9 +38,8 @@ import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 public class Solution838Ex2 {
     public String pushDominoes(String dominoes) {
         StringBuilder res = new StringBuilder(dominoes);
-        boolean LastFlag = false;   // 'left'
-        boolean CurFlag = true;     // 'right'
-        int last = -1, cur = 0, temp;
+        boolean LastFlag = false;   // 'left'-> false   'right' -> true
+        int last = -1, temp;
         for (int i = 0; i < dominoes.length(); i ++){
             temp = i - last - 1;
             if (res.charAt(i) == 'L'){
@@ -50,7 +49,7 @@ public class Solution838Ex2 {
                         for (int j = 1; j <= temp; j ++){
                             res.setCharAt(last + j, 'R');
                             res.setCharAt(i - j, 'L');
-                         }
+                        }
                     }else {
                         for (int j = 1; j <= temp; j ++){
                             res.setCharAt(last + j, 'L');
