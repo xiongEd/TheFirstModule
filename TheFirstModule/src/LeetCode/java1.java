@@ -188,7 +188,10 @@ public class java1 {
         LNe.next = LNf;
         LNf.next = LNb;
 
-
+        int[]a2 = {1,2,3,4,5,5345,5346,2131,423,5435,32423,2352,4234,545,4234,234};
+        int[]a3 = {1,2,3,4,5,5345,5346,2131,423,5435,32423,2352,4234,545,4234,234};
+        System.out.println(Arrays.hashCode(a2));
+        System.out.println(Arrays.hashCode(a3));
     }
     public static void func1(int[] a){
         a[1] = 10;
