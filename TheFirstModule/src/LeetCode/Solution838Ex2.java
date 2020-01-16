@@ -1,7 +1,5 @@
 package LeetCode;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 /*
 一行中有 N 张多米诺骨牌，我们将每张多米诺骨牌垂直竖立。
 
