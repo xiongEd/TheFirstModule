@@ -34,7 +34,7 @@ import java.util.Stack;
 输出: false
  */
 public class Solution331 {
-    public static boolean isValidSerialization(String preorder) {
+    public boolean isValidSerialization(String preorder) {
         Stack<Character> stack = new Stack<Character>();
         for (int i = 0; i < preorder.length(); i ++){
             if (preorder.charAt(i) == ','){
@@ -54,10 +54,5 @@ public class Solution331 {
             return stack.empty();
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        String s = "9,3,4,#,#,1,#,#,2,#,6,#,#";
-        System.out.println(isValidSerialization(s));
     }
 }

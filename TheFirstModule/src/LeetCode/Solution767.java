@@ -45,7 +45,7 @@ public class Solution767 {
             }
             last = maxIndex;
             words[maxIndex] --;
-            res.append((char) ((char)'a' + maxIndex));
+            res.append((char) ('a' + maxIndex));
         }
 
         return res.toString();
