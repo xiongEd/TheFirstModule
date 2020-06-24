@@ -15,7 +15,7 @@ import java.util.Stack;
 public class Solution739 {
     public int[] dailyTemperatures(int[] T) {
         int[] result = new int[T.length];
-        Deque<Integer> stack = new ArrayDeque();
+        Deque<Integer> stack = new ArrayDeque<>();
         //Stack<Integer> stack = new Stack<>();
         int temp;
         for (int i = 0; i < T.length; i ++) {

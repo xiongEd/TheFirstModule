@@ -18,7 +18,7 @@ public class Solution125 {
     //大小写转小写字母： Character.toLowerCase(ch)
     //字符串反转： StringBuffer_.reverse()
     public boolean isPalindrome(String s) {
-        StringBuffer sgood = new StringBuffer();
+        StringBuilder sgood = new StringBuilder();
         int length = s.length();
         for (int i = 0; i < length; i++) {
             char ch = s.charAt(i);
