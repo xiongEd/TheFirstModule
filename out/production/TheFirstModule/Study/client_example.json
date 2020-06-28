@@ -1,0 +1,45 @@
+{
+  "site_tittle" : "FXTM富拓",
+  "comprehensive_evaluation" : "91.30",
+  "Scoring_details" : {
+    "supervision_rating" : {"score" :  "92.68", "mip_link" : "http://********"},
+    "transaction_environment" : {"score" : "79.93", "mip_link" : "http://*******"},
+    "Public_praise" : {"score" : "20.00", "mip_link" : "http://*******"}
+  },
+  "supervision_information" : [{
+      "name": "FCA",
+      "icon_link": "http://*******/icon/FCA.ico",
+      "grade": "AAA",
+      "description": "STP直通牌照",
+      "mip_link": "http://*******"
+    }, {
+      "name" : "FCA",
+      "icon_link" : "http://*******/icon/FCA.ico",
+      "grade" : "AA",
+      "description" : "EEA欧盟牌照",
+      "mip_link" : "http://*******"
+    }, {
+    "name" : "CySEC",
+    "icon_link" : "http://*******/icon/CySEC.ico",
+    "grade" : "A",
+    "description" : "MM做市商牌照",
+    "mip_link" : "http://*******"
+  }],
+  "Public_praise" : {
+    "Comment_number" : "211",
+    "mip_link" : "http://*******",
+    "Comment_list" : [{
+      "user_avatar" : "http://*******/user/xxx_avatar.ico",
+      "user_rating" : "9",
+      "message" : "没有滑点，品种好像没有好多 要是再多点交易品种就好了"
+    }, {
+      "user_avatar" : "http://*******/user/xxy_avatar.ico",
+      "user_rating" : "9",
+      "message" : "老平台，受多方监管，资金安全，放心"
+    }, {
+      "user_avatar" : "http://*******/user/xxz_avatar.ico",
+      "user_rating" : "9",
+      "message" : "很不错的平台"
+    }]
+  }
+}
