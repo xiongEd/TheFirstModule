@@ -1,0 +1,920 @@
+Index: TheFirstModule/src/LeetCode/java1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package LeetCode;\r\nimport java.util.*;\r\n\r\npublic class java1 {\r\n    public static class ListNode {\r\n        int val;\r\n        ListNode next = null;\r\n\r\n        ListNode(int val) {\r\n            this.val = val;\r\n        }\r\n    }\r\n    public static void main(String[] args){\r\n        char[][] a = {{'H','e','l','l','o',' ','w','o','r','l','d','!'},{'a','a'}};\r\n        fun1(a);\r\n        System.out.println(\"Hello world!\" + a[1][1]);\r\n        String b = \"aaa\";\r\n        String c = b;\r\n        String d;\r\n        d = b;\r\n        System.out.println(d);\r\n\r\n        //创建ArrayList集合：\r\n        List<String> list = new ArrayList<String>();\r\n        System.out.println(\"ArrayList集合初始化容量：\"+list.size());\r\n\r\n        //添加功能：\r\n        list.add(\"Hello\");\r\n        list.add(\"world\");\r\n        list.add(2,\"!\");\r\n        System.out.println(\"ArrayList当前容量：\"+list.size());\r\n\r\n        //修改功能：\r\n        list.set(0,\"my\");\r\n        list.set(1,\"name\");\r\n        System.out.println(\"ArrayList当前内容：\"+list.toString());\r\n\r\n        //获取功能：\r\n        String element = list.get(0);\r\n        System.out.println(element);\r\n\r\n        //迭代器遍历集合：(ArrayList实际的跌倒器是Itr对象)\r\n        Iterator<String> iterator =  list.iterator();\r\n        while(iterator.hasNext()){\r\n            String next = iterator.next();\r\n            System.out.println(next);\r\n        }\r\n\r\n        //for循环迭代集合：\r\n        for(String str:list){\r\n            System.out.println(str);\r\n        }\r\n\r\n        //判断功能：\r\n        boolean isEmpty = list.isEmpty();\r\n        boolean isContain = list.contains(\"my\");\r\n\r\n        //长度功能：\r\n        int size = list.size();\r\n\r\n        //把集合转换成数组：\r\n        String[] strArray = list.toArray(new String[]{});\r\n\r\n        //删除功能：\r\n        list.remove(0);\r\n        list.remove(\"world\");\r\n        list.clear();\r\n        System.out.println(\"ArrayList当前容量：\"+list.size());\r\n\r\n        List<Integer> temp = new ArrayList<Integer>();\r\n        temp.add(2);\r\n        temp.add(5);\r\n        temp.add(6);\r\n        temp.add(4);\r\n        temp.add(1);\r\n        for(Integer n:temp){\r\n            System.out.println(n);\r\n        }\r\n        System.out.println(temp.size() + \"!!!!!\");\r\n        System.out.println(temp.remove(temp.size() - 1) + \"~~~\");\r\n        for(Integer n:temp){\r\n            System.out.println(n);\r\n        }\r\n\r\n        String sd = new String(\"asdasfasf\");\r\n        System.out.println(sd);\r\n        byte[]sd_byte = sd.getBytes();\r\n        String sd2 = new String(sd_byte);\r\n        System.out.println(sd.hashCode());\r\n        System.out.println(sd2.hashCode());\r\n        String sd3 = new String(\"asdasfasf\");\r\n        String sd4 = new String(\"asdasfasf\");\r\n        String sd5 = new String(\"asdasfasf\");\r\n        System.out.println();\r\n        System.out.println(sd2.hashCode());\r\n        System.out.println(sd3.hashCode());\r\n        System.out.println(sd4.hashCode());\r\n        System.out.println(sd5.hashCode());\r\n        int[][]aaa = new int[5][5];\r\n        for(int i = 0; i < 25; i++)\r\n            aaa[i / 5][i%5] = i + 1;\r\n\r\n        for(int[] re : aaa){\r\n            for(int req : re)\r\n                System.out.print(req + \"  \");\r\n            System.out.println();\r\n        }\r\n        System.out.println(aaa.length);\r\n        boolean[] bool = new boolean[10];\r\n        System.out.println(bool[5]);\r\n        System.out.println(!bool[5]);\r\n\r\n        char[][] chaR = {{'a','v','d','w'},{'t','e','m','p'}};\r\n        String temp11;\r\n        temp11 = new String(chaR[0]);\r\n        System.out.println(temp11);\r\n        System.out.println(new ArrayList<String>(Collections.singleton(new String(chaR[1]))));\r\n        System.out.println(1e9);\r\n        int[] aaax = new int[10];\r\n        System.out.println(aaax[5]);\r\n        String str12 = new String(\"101000100\");\r\n        char[] str13 = str12.toCharArray();\r\n        System.out.println(str13);\r\n\r\n        int x = 2,y,z;\r\n        y = x&(x-1);\r\n        z = x&(-x);\r\n        System.out.println(\"y = \"+ y + \"    Z = \"+z);\r\n\r\n        String string = new String(\"abdhgASDFksaljdaaccccg\");\r\n        char[] stringc = string.toCharArray();\r\n        Arrays.sort(stringc);\r\n        for(char temp1 : stringc){\r\n            System.out.print(temp1);\r\n        }\r\n        System.out.println();\r\n\r\n        ArrayList<String>exd = new ArrayList<String>();\r\n        exd.add(stringc.toString());\r\n        String daf = stringc.toString();\r\n\r\n        System.out.println(daf);\r\n        System.out.println(\"111:____\" + exd.get(0).toCharArray());\r\n        stringc[0] = 'G';\r\n\r\n        System.out.println(exd.get(0).toCharArray());\r\n\r\n\r\n        int[] ints = {1,2,6,3,7,4,5};\r\n        ArrayList<Integer> intsList = new ArrayList<Integer>();\r\n        for (int dad : ints) intsList.add(dad);\r\n        Collections.sort(intsList, new Comparator<Integer>() {\r\n            @Override\r\n            public int compare(Integer o1, Integer o2) {\r\n                return o2 - o1;\r\n            }\r\n        });\r\n        for (int dad : intsList)\r\n        System.out.print(dad);\r\n        System.out.println();\r\n        Integer integer = new Integer(0);\r\n        System.out.println(ints[1]);\r\n        int[] copy = ints.clone();\r\n        System.out.println(copy[1]);\r\n        func1(ints);\r\n        System.out.println(ints[1]);\r\n        System.out.println(copy[1]);\r\n        boolean adsa = true;\r\n        System.out.println(adsa);\r\n        func2(adsa);\r\n        System.out.println(adsa);\r\n\r\n        int a4 = 4;\r\n        System.out.println(a4);\r\n        int a5 = a4 << 1;\r\n        System.out.println(a5);\r\n        boolean dads;\r\n        ListNode LNa = new ListNode(0);\r\n        ListNode LNb = new ListNode(1);\r\n        ListNode LNc = new ListNode(2);\r\n        ListNode LNd = new ListNode(3);\r\n        ListNode LNe = new ListNode(4);\r\n        ListNode LNf = new ListNode(5);\r\n        LNa.next = LNb;\r\n        LNb.next = LNc;\r\n        LNc.next = LNd;\r\n        LNd.next = LNe;\r\n        LNe.next = LNf;\r\n        LNf.next = LNb;\r\n\r\n        int[]a2 = {1,2,3,4,5,5345,5346,2131,423,5435,32423,2352,4234,545,4234,234};\r\n        int[]a3 = {1,2,3,4,5,5345,5346,2131,423,5435,32423,2352,4234,545,4234,234};\r\n        System.out.println(Arrays.hashCode(a2));\r\n        System.out.println(Arrays.hashCode(a3));\r\n\r\n        int[]asdaf1 = {2,4,4,5,6,7,7};\r\n        int[]asdaf2 = asdaf1;\r\n        asdaf1[1] = 5;\r\n        System.out.println(asdaf2[1]);\r\n    }\r\n    public static void func1(int[] a){\r\n        a[1] = 10;\r\n    }\r\n    public static void func2(boolean a){\r\n        a = false;\r\n    }\r\n\r\n    public static void fun1(char[][]a){\r\n        a[1][1] = 'A';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/java1.java	(revision 2611392bd0588986406516fb7946ae51a7ba749a)
++++ TheFirstModule/src/LeetCode/java1.java	(date 1592388181764)
+@@ -197,6 +197,14 @@
+         int[]asdaf2 = asdaf1;
+         asdaf1[1] = 5;
+         System.out.println(asdaf2[1]);
++
++        int dada = (int) (1e9 + 7);
++        System.out.println(Math.log(1e9 + 7) / Math.log(3));
++        System.out.println(Math.pow(3, 333));
++
++
++
++
+     }
+     public static void func1(int[] a){
+         a[1] = 10;
+Index: TheFirstModule/src/Study/example2.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/Study/example2.json	(date 1590832362036)
++++ TheFirstModule/src/Study/example2.json	(date 1590832362036)
+@@ -0,0 +1,24 @@
++{
++  "code": 0,
++  "subCode": "1A14100",
++  "message": "查询交易商信息成功",
++  "bodyMessage": {
++    "fullName": "HYCM兴业投资(英国)",
++    "platformNature": 0,
++    "operatingStatus": 0,
++    "certificationStatus": 1,
++    "regulatoryRating": 96,
++    "tradingEnvironment": 86.64,
++    "wordOfMouthScore": 8.15,
++    "overallRating": 88.84,
++    "enabledStatus": 1,
++    "regulatoryInfo":[
++{
++  "regulatoryLevel":5,
++  "area": "英国",
++  "regulatoryAbbreviation": "FCA",
++  "regulatoryAuthority":"英国金融行为监管局",
++  "regulatoryStatus": 1
++}]
++}
++}
+\ No newline at end of file
+Index: TheFirstModule/src/LeetCode/Solution394.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution394.java	(date 1590715424357)
++++ TheFirstModule/src/LeetCode/Solution394.java	(date 1590715424357)
+@@ -0,0 +1,86 @@
++package LeetCode;
++/*
++给定一个经过编码的字符串，返回它解码后的字符串。
++
++编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。
++
++你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。
++
++此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。
++
++示例:
++
++s = "3[a]2[bc]", 返回 "aaabcbc".
++s = "3[a2[c]]", 返回 "accaccacc".
++s = "2[abc]3[cd]ef", 返回 "abcabccdcdcdef".
++ */
++public class Solution394 {
++    public String decodeString(String s) {
++        StringBuilder stringBuilder = new StringBuilder();
++        StringBuilder stringBuilderTemp = new StringBuilder();
++        int time = 0, repetition = 0;
++        for (char ch : s.toCharArray()) {
++            if (ch > '0' && ch <= '9') {
++                time = time *10 + (ch - '0');
++                if (stringBuilderTemp.length() != 0) {
++                    stringBuilder.append(stringBuilderTemp);
++                    stringBuilderTemp.setLength(0);
++                }
++            } else if (ch == '[') {
++                repetition = time;
++                stringBuilderTemp.setLength(0);
++                time = 0;
++            } else if (ch == ']') {
++                for (int i = 0; i < repetition; i ++) {
++                    stringBuilder.append(stringBuilderTemp);
++                }
++                stringBuilderTemp.setLength(0);
++            } else {
++                stringBuilderTemp.append(ch);
++            }
++        }
++        return stringBuilder.toString();
++    }
++}
++class Solution394_ {
++    public String decodeString(String s) {
++        StringBuilder stringBuilder = new StringBuilder();
++        StringBuilder stringBuilderTemp = new StringBuilder();
++        int time = 0, repetition = 0;
++        for (char ch : s.toCharArray()) {
++            if (ch > '0' && ch <= '9') {
++                time = time *10 + (ch - '0');
++                if (stringBuilderTemp.length() != 0) {
++                    stringBuilder.append(stringBuilderTemp);
++                    stringBuilderTemp.setLength(0);
++                }
++            } else if (ch == '[') {
++                repetition = time;
++                stringBuilderTemp.setLength(0);
++                time = 0;
++            } else if (ch == ']') {
++                for (int i = 0; i < repetition; i ++) {
++                    stringBuilder.append(stringBuilderTemp);
++                }
++                stringBuilderTemp.setLength(0);
++            } else {
++                stringBuilderTemp.append(ch);
++            }
++        }
++        return stringBuilder.toString();
++    }
++
++    public StringBuilder SolveFunction(String string) {
++        int time = 0;
++        StringBuilder stringBuilder = new StringBuilder();
++        for (char ch : string.toCharArray()) {
++            if (ch > '0' && ch <= '9') {
++                time = time * 10 + (ch - '0');
++                continue;
++            }
++
++        }
++
++        return stringBuilder;
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution974.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution974.java	(date 1590666020899)
++++ TheFirstModule/src/LeetCode/Solution974.java	(date 1590666020899)
+@@ -0,0 +1,53 @@
++package LeetCode;
++
++import java.util.HashMap;
++import java.util.Map;
++
++/*
++给定一个整数数组 A，返回其中元素之和可被 K 整除的（连续、非空）子数组的数目。
++
++ 
++
++示例：
++
++输入：A = [4,5,0,-2,-3,1], K = 5
++输出：7
++解释：
++有 7 个子数组满足其元素之和可被 K = 5 整除：
++[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
++ 
++
++提示：
++
++1 <= A.length <= 30000
++-10000 <= A[i] <= 10000
++2 <= K <= 10000
++ */
++public class Solution974 {
++    public static int subarraysDivByK(int[] A, int K) {
++        Map<Integer, Integer> preMap = new HashMap<>();
++        int result = 0, pre = 0, temp;
++        preMap.put(0, 1);
++        for (int i : A) {
++            pre += i;
++            temp = pre % K;
++            if (temp < 0) {
++                temp += K;
++            }
++            if (preMap.containsKey(temp)) {
++                result += preMap.get(temp);
++                preMap.put(temp, preMap.get(temp) + 1);
++            } else {
++                preMap.put(temp, 1);
++            }
++        }
++        return result;
++    }
++
++    public static void main(String[] args) {
++        int[] a = {-1, 2, 9};
++        int K = -2;
++        subarraysDivByK(a, K);
++    }
++}
++
+Index: TheFirstModule/src/LeetCode/Solution680.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution680.java	(date 1590408549379)
++++ TheFirstModule/src/LeetCode/Solution680.java	(date 1590408549379)
+@@ -0,0 +1,45 @@
++package LeetCode;
++/*
++
++给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
++
++示例 1:
++
++输入: "aba"
++输出: True
++示例 2:
++
++输入: "abca"
++输出: True
++解释: 你可以删除c字符。
++注意:
++
++字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
++ */
++public class Solution680 {
++    public boolean validPalindrome(String s) {
++        int head = 0, tail = s.length() - 1, chance = 1;
++        while (head < tail) {
++            if (s.charAt(head) == s.charAt(tail)) {
++                head++;
++                tail--;
++            } else {
++                boolean flag1 = true, flag2 = true;
++                for (int i = head, j = tail - 1; i < j; i++, j--) {
++                    if (s.charAt(i) != s.charAt(j)) {
++                        flag1 = false;
++                        break;
++                    }
++                }
++                for (int i = head + 1, j = tail; i < j; i++, j--) {
++                    if (s.charAt(i) != s.charAt(j)) {
++                        flag2 = false;
++                        break;
++                    }
++                }
++                return flag1 || flag2;
++            }
++        }
++        return true;
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution198.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution198.java	(date 1590716002748)
++++ TheFirstModule/src/LeetCode/Solution198.java	(date 1590716002748)
+@@ -0,0 +1,42 @@
++package LeetCode;
++/*
++你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
++
++给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。
++
++示例 1:
++
++输入: [1,2,3,1]
++输出: 4
++解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
++     偷窃到的最高金额 = 1 + 3 = 4 。
++示例 2:
++
++输入: [2,7,9,3,1]
++输出: 12
++解释: 偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
++     偷窃到的最高金额 = 2 + 9 + 1 = 12 。
++ */
++public class Solution198 {
++    public int rob(int[] nums) {
++        int result = 0;
++
++        if (nums.length < 3) {
++            for (int i : nums) {
++                result = Math.max(result, i);
++            }
++            return result;
++        }
++
++        nums[2] += nums[0];
++        if (nums.length == 3) {
++            return Math.max(nums[1], nums[2]);
++        }
++
++        for (int i = 3; i < nums.length; i ++) {
++            nums[i] += Math.max(nums[i - 2], nums[i - 3]);
++        }
++
++        return Math.max(nums[nums.length - 1], nums[nums.length - 2]);
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution837.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution837.java	(date 1591189016655)
++++ TheFirstModule/src/LeetCode/Solution837.java	(date 1591189016655)
+@@ -0,0 +1,70 @@
++package LeetCode;
++/*
++爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：
++
++爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。
++
++当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？
++
++示例 1：
++
++输入：N = 10, K = 1, W = 10
++输出：1.00000
++说明：爱丽丝得到一张卡，然后停止。
++示例 2：
++
++输入：N = 6, K = 1, W = 10
++输出：0.60000
++说明：爱丽丝得到一张卡，然后停止。
++在 W = 10 的 6 种可能下，她的得分不超过 N = 6 分。
++示例 3：
++
++输入：N = 21, K = 17, W = 10
++输出：0.73278
++提示：
++
++0 <= K <= N <= 10000
++1 <= W <= 10000
++如果答案与正确答案的误差不超过 10^-5，则该答案将被视为正确答案通过。
++此问题的判断限制时间已经减少。
++ */
++public class Solution837 {
++    public static double new21Game(int N, int K, int W) {
++        double result;
++        if (N < K) {
++            return 0.0;
++        } else if (N >= K + W - 1) {
++            return  1.0;
++        } else if (K == N) {
++            return 1.0;
++        }
++
++        int[] nums = new int[K + W];
++        int[] sum = new int[K + W];
++        nums[0] = 1;
++        sum[0] = 1;
++        for (int i = 1; i < nums.length; i ++) {
++            if (i <= K) {
++                for (int j = 1; j <= W && i >= j; j ++ ) {
++                    nums[i] += nums[i - j];
++                }
++            } else {
++                for (int j = 1; j <= W && i - j >= 0 ; j ++ ) {
++                    if (i - j < K) {
++                        nums[i] += nums[i - j];
++                    }
++
++                }
++            }
++
++            sum[i] = sum[i - 1] + nums[i];
++        }
++        int pro = K > 0 ? sum[K - 1] : 0;
++        result = (double) (sum[N] - pro) / (sum[K + W - 1] - pro);
++        return result;
++    }
++
++    public static void main(String[] args) {
++        new21Game(5, 3, 4);
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution84.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution84.java	(date 1590836958145)
++++ TheFirstModule/src/LeetCode/Solution84.java	(date 1590836958145)
+@@ -0,0 +1,66 @@
++package LeetCode;
++
++import java.util.ArrayDeque;
++import java.util.Deque;
++
++/*
++给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
++
++求在该柱状图中，能够勾勒出来的矩形的最大面积。
++
++ 
++
++
++
++以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。
++
++ 
++
++
++
++图中阴影部分为所能勾勒出的最大矩形面积，其面积为 10 个单位。
++
++ 
++
++示例:
++
++输入: [2,1,5,6,2,3]
++输出: 10
++ */
++public class Solution84 {
++    public static int largestRectangleArea(int[] heights) {
++        Deque<Integer> stack = new ArrayDeque<>();
++        int result = 0, tempIndex, tempArea, i;
++        stack.push(-1);
++        for (i = 0; i < heights.length; i ++) {
++            tempIndex = stack.peek();
++            if (tempIndex == -1) {
++                stack.push(i);
++            }else {
++                if (heights[i] > heights[tempIndex]) {
++                    stack.push(i);
++                } else {
++                    while ((tempIndex = stack.peek()) != -1 && heights[i] < heights[tempIndex]) {
++                        stack.pop();
++                        tempArea = heights[tempIndex] * (i - stack.peek() -1);
++                        result = Math.max(tempArea, result);
++                    }
++                    stack.push(i);
++                }
++            }
++
++        }
++        while ((tempIndex = stack.peek())!= -1) {
++            stack.pop();
++            tempArea = heights[tempIndex] * (i - stack.peek() - 1);
++            result = Math.max(tempArea, result);
++        }
++        return result;
++    }
++
++    public static void main(String[] args) {
++        int[] a = {2,1,5,6,2,3};
++        System.out.println(largestRectangleArea(a));
++        ;
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution238.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution238.java	(date 1591233176835)
++++ TheFirstModule/src/LeetCode/Solution238.java	(date 1591233176835)
+@@ -0,0 +1,42 @@
++package LeetCode;
++
++import java.util.Arrays;
++import java.util.Collections;
++import java.util.List;
++
++/*
++238. 除自身以外数组的乘积
++给你一个长度为 n 的整数数组 nums，其中 n > 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
++
++
++
++示例:
++
++输入: [1,2,3,4]
++输出: [24,12,8,6]
++
++
++提示：题目数据保证数组之中任意元素的全部前缀元素和后缀（甚至是整个数组）的乘积都在 32 位整数范围内。
++
++说明: 请不要使用除法，且在 O(n) 时间复杂度内完成此题。
++
++进阶：
++你可以在常数空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组不被视为额外空间。）
++ */
++public class Solution238 {
++    public int[] productExceptSelf(int[] nums) {
++        int len = nums.length;
++        int[] result = Arrays.copyOf(nums, len);
++        for (int i = 1; i < len - 1; i ++) {
++            nums[i] *= nums[i - 1];
++            result[len - 1 - i] *= result[len - i];
++        }
++
++        result[0] = result[1];
++        for (int i = 1; i < len - 1; i ++) {
++            result[i] = nums[i - 1] * result[i + 1];
++        }
++        result[len - 1] = nums[len - 2];
++        return result;
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution152.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution152.java	(date 1590408521104)
++++ TheFirstModule/src/LeetCode/Solution152.java	(date 1590408521104)
+@@ -0,0 +1,53 @@
++package LeetCode;
++/*
++给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
++
++ 
++
++示例 1:
++
++输入: [2,3,-2,4]
++输出: 6
++解释: 子数组 [2,3] 有最大乘积 6。
++示例 2:
++
++输入: [-2,0,-1]
++输出: 0
++解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
++ */
++public class Solution152 {
++    public int maxProduct(int[] nums) {
++        if (nums.length == 0) return 0;
++        int max, min, result, tempValue, simplicityMin;
++        max = min = result = simplicityMin = Integer.MIN_VALUE;
++        for (int temp : nums) {
++            if (temp > 0) {
++                if (max == simplicityMin) {
++                    max = temp;
++                } else {
++                    max *= temp;
++                }
++                if (min != simplicityMin) {
++                    min *= temp;
++                }
++            } else if (temp < 0) {
++                tempValue = min;
++                if (max == simplicityMin) {
++                    min = temp;
++                } else {
++                    min = max * temp;
++                }
++                if (tempValue != simplicityMin) {
++                    max = tempValue * temp;
++                } else {
++                    max = tempValue;
++                }
++            } else {
++                max = min = simplicityMin;
++                result = Math.max(result, 0);
++            }
++            result = Math.max(result, max);
++        }
++        return Math.max(result, max);
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution9_Cplusplus.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package LeetCode;\r\n/*\r\n判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。\r\n\r\n示例 1:\r\n\r\n输入: 121\r\n输出: true\r\n示例 2:\r\n\r\n输入: -121\r\n输出: false\r\n解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。\r\n示例 3:\r\n\r\n输入: 10\r\n输出: false\r\n解释: 从右向左读, 为 01 。因此它不是一个回文数。\r\n */\r\npublic class Solution9_Cplusplus {\r\n    /*\r\n    public:\r\n    bool isPalindrome(int x) {\r\n        if(x < 0)\r\n\t\t\treturn false;\r\n\r\n\t\tstring s;\r\n\t\tint n,i,r;\r\n\r\n\t\twhile (x)\r\n\t\t\t{\r\n\t\t\tr = x%10;\r\n\t\t\tx /= 10;\r\n\t\t\ts += r;\r\n\t\t\t}\r\n\r\n\t\tn = s.size();\r\n\t\ti =0; r = n-1;\r\n\t\twhile (i <= r)\r\n\t\t\t{\r\n\t\t\tif(s[i] != s[r])\r\n\t\t\t\treturn false;\r\n\r\n\t\t\t++i;\r\n\t\t\t--r;\r\n\t\t\t}\r\n\t\treturn true;\r\n    }\r\n     */\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution9_Cplusplus.java	(revision 2611392bd0588986406516fb7946ae51a7ba749a)
++++ TheFirstModule/src/LeetCode/Solution9_Cplusplus.java	(date 1591751253713)
+@@ -18,7 +18,19 @@
+ 解释: 从右向左读, 为 01 。因此它不是一个回文数。
+  */
+ public class Solution9_Cplusplus {
+-    /*
++
++    /* first
++    bool isPalindrome(int x) {
++        long exchange = 0, temp = x;
++        while (temp > 0) {
++            exchange = exchange *10 + temp % 10;
++            temp /= 10;
++        }
++        return exchange == x;
++    }
++     */
++
++    /* second
+     public:
+     bool isPalindrome(int x) {
+         if(x < 0)
+Index: TheFirstModule/src/LeetCode/Solution287.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution287.java	(date 1590629012325)
++++ TheFirstModule/src/LeetCode/Solution287.java	(date 1590629012325)
+@@ -0,0 +1,34 @@
++package LeetCode;
++/*
++给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
++
++示例 1:
++
++输入: [1,3,4,2,2]
++输出: 2
++示例 2:
++
++输入: [3,1,3,4,2]
++输出: 3
++说明：
++
++不能更改原数组（假设数组是只读的）。
++只能使用额外的 O(1) 的空间。
++时间复杂度小于 O(n2) 。
++数组中只有一个重复的数字，但它可能不止重复出现一次。
++ */
++public class Solution287 {
++    public int findDuplicate(int[] nums) {
++        int slow = 0, fast = 0;
++        do {
++            slow = nums[slow];
++            fast = nums[nums[fast]];
++        } while (slow != fast);
++        slow = 0;
++        while (slow != fast) {
++            slow = nums[slow];
++            fast = nums[fast];
++        }
++        return slow;
++    }
++}
+Index: TheFirstModule/src/LeetCode/Solution560.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution560.java	(date 1590408413898)
++++ TheFirstModule/src/LeetCode/Solution560.java	(date 1590408413898)
+@@ -0,0 +1,29 @@
++package LeetCode;
++
++import java.util.HashMap;
++/*
++给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
++
++示例 1 :
++
++输入:nums = [1,1,1], k = 2
++输出: 2 , [1,1] 与 [1,1] 为两种不同的情况。
++说明 :
++
++数组的长度为 [1, 20,000]。
++数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
++ */
++public class Solution560 {
++    public static int subarraySum(int[] nums, int k) {
++        int result = 0, pre = 0;
++        HashMap<Integer, Integer> preMap = new HashMap<>();
++        preMap.put(0, 1);
++        for (int num : nums) {
++            pre += num;
++            result += preMap.getOrDefault(pre - k, 0);
++            preMap.put(pre, preMap.getOrDefault(pre, 0) + 1);
++
++        }
++        return result;
++    }
++}
+Index: TheFirstModule/src/Study/client_example.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/Study/client_example.json	(date 1590544224114)
++++ TheFirstModule/src/Study/client_example.json	(date 1590544224114)
+@@ -0,0 +1,45 @@
++{
++  "site_tittle" : "FXTM富拓",
++  "comprehensive_evaluation" : "91.30",
++  "Scoring_details" : {
++    "supervision_rating" : {"score" :  "92.68", "mip_link" : "http://********"},
++    "transaction_environment" : {"score" : "79.93", "mip_link" : "http://*******"},
++    "Public_praise" : {"score" : "20.00", "mip_link" : "http://*******"}
++  },
++  "supervision_information" : [{
++      "name": "FCA",
++      "icon_link": "http://*******/icon/FCA.ico",
++      "grade": "AAA",
++      "description": "STP直通牌照",
++      "mip_link": "http://*******"
++    }, {
++      "name" : "FCA",
++      "icon_link" : "http://*******/icon/FCA.ico",
++      "grade" : "AA",
++      "description" : "EEA欧盟牌照",
++      "mip_link" : "http://*******"
++    }, {
++    "name" : "CySEC",
++    "icon_link" : "http://*******/icon/CySEC.ico",
++    "grade" : "A",
++    "description" : "MM做市商牌照",
++    "mip_link" : "http://*******"
++  }],
++  "Public_praise" : {
++    "Comment_number" : "211",
++    "mip_link" : "http://*******",
++    "Comment_list" : [{
++      "user_avatar" : "http://*******/user/xxx_avatar.ico",
++      "user_rating" : "9",
++      "message" : "没有滑点，品种好像没有好多 要是再多点交易品种就好了"
++    }, {
++      "user_avatar" : "http://*******/user/xxy_avatar.ico",
++      "user_rating" : "9",
++      "message" : "老平台，受多方监管，资金安全，放心"
++    }, {
++      "user_avatar" : "http://*******/user/xxz_avatar.ico",
++      "user_rating" : "9",
++      "message" : "很不错的平台"
++    }]
++  }
++}
+\ No newline at end of file
+Index: TheFirstModule/src/LeetCode/Solution146.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution146.java	(date 1590408494752)
++++ TheFirstModule/src/LeetCode/Solution146.java	(date 1590408494752)
+@@ -0,0 +1,108 @@
++package LeetCode;
++
++import java.util.HashMap;
++import java.util.Map;
++/*
++运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
++
++获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。
++写入数据 put(key, value) - 如果密钥已经存在，则变更其数据值；如果密钥不存在，则插入该组「密钥/数据值」。当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
++
++ 
++
++进阶:
++
++你是否可以在 O(1) 时间复杂度内完成这两种操作？
++
++ 
++
++示例:
++
++LRUCache cache = new LRUCache( 2  缓存容量  );
++
++        cache.put(1, 1);
++        cache.put(2, 2);
++        cache.get(1);       // 返回  1
++        cache.put(3, 3);    // 该操作会使得密钥 2 作废
++        cache.get(2);       // 返回 -1 (未找到)
++        cache.put(4, 4);    // 该操作会使得密钥 1 作废
++        cache.get(1);       // 返回 -1 (未找到)
++        cache.get(3);       // 返回  3
++        cache.get(4);       // 返回  4
++ */
++public class Solution146 {
++
++}
++class LinkedListNode {
++     int key;
++     int value;
++     LinkedListNode next;
++     LinkedListNode pre;
++    public LinkedListNode(int a, int b) {
++        this.key = a;
++        this.value = b;
++    }
++}
++
++class LRUCache {
++    private Map<Integer, LinkedListNode> hashMap;
++    private LinkedListNode head;
++    private LinkedListNode tail;
++    private int capacity;
++
++    public LRUCache(int capacity) {
++        head = new LinkedListNode(0,0);
++        tail = new LinkedListNode(0,0);
++        head.next = tail;
++        tail.pre = head;
++        this.capacity = capacity;
++        hashMap = new HashMap<>();
++    }
++
++    public int get(int key) {
++        LinkedListNode node = hashMap.getOrDefault(key, null);
++        if (node == null) {
++            return -1;
++        }
++        moveToHead(node);
++        return node.value;
++    }
++
++    public void put(int key, int value) {
++        if (hashMap.containsKey(key)) {
++            LinkedListNode node = hashMap.get(key);
++            moveToHead(node);
++            node.value = value;
++            return;
++        }
++
++        LinkedListNode node = new LinkedListNode(key, value);
++
++        if (hashMap.size() < capacity) {
++            AddToHead(node);
++        } else {
++            AddToHead(node);
++            deleteFromeTail();
++        }
++        hashMap.put(key, node);
++    }
++
++    private void moveToHead(LinkedListNode node) {
++        node.next.pre = node.pre;
++        node.pre.next = node.next;
++        AddToHead(node);
++    }
++
++    private void AddToHead(LinkedListNode node) {
++        node.next = head.next;
++        node.next.pre = node;
++        head.next = node;
++        node.pre = head;
++    }
++
++    private void deleteFromeTail() {
++        hashMap.remove(tail.pre.key);
++        tail.pre = tail.pre.pre;
++        tail.pre.next = tail;
++    }
++}
+\ No newline at end of file
+Index: TheFirstModule/src/LeetCode/Solution105.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TheFirstModule/src/LeetCode/Solution105.java	(date 1590408444680)
++++ TheFirstModule/src/LeetCode/Solution105.java	(date 1590408444680)
+@@ -0,0 +1,54 @@
++package LeetCode;
++/*
++
++根据一棵树的前序遍历与中序遍历构造二叉树。
++
++注意:
++你可以假设树中没有重复的元素。
++
++例如，给出
++
++前序遍历 preorder = [3,9,20,15,7]
++中序遍历 inorder = [9,3,15,20,7]
++返回如下的二叉树：
++
++    3
++   / \
++  9  20
++    /  \
++   15   7
++通过次数81,819提交次数122,079
++ */
++public class Solution105 {
++
++    public static class TreeNode {
++      int val;
++      TreeNode left;
++      TreeNode right;
++      TreeNode(int x) { val = x; }
++  }
++    public TreeNode buildTree(int[] preorder, int[] inorder) {
++        if (preorder.length < 1 || inorder.length < 1)
++            return null;
++        return SolveFunction(preorder, inorder, 0, preorder.length - 1, 0, preorder.length - 1);
++    }
++
++    public TreeNode SolveFunction(int[] preorder, int[] inorder, int head1, int tail1, int head2, int tail2) {
++        if (tail1 < head1 || tail2 < head2) {
++            return null;
++        }
++        TreeNode root = new TreeNode(preorder[head1]);
++        for (int i = head2; i <= tail2; i ++) {
++            if (preorder[head1] == inorder[i]) {
++                ;
++                if (i > head2) {
++                    root.left = SolveFunction(preorder, inorder, head1 + 1, head1 + i - head2, head2, i - 1);
++                }
++                if (i < tail2) {
++                    root.right = SolveFunction(preorder, inorder, head1 + i - head2 + 1, tail1, i + 1, tail2);
++                }
++            }
++        }
++        return root;
++    }
++}
