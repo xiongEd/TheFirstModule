@@ -1,0 +1,24 @@
+{
+  "code": 0,
+  "subCode": "1A14100",
+  "message": "查询交易商信息成功",
+  "bodyMessage": {
+    "fullName": "HYCM兴业投资(英国)",
+    "platformNature": 0,
+    "operatingStatus": 0,
+    "certificationStatus": 1,
+    "regulatoryRating": 96,
+    "tradingEnvironment": 86.64,
+    "wordOfMouthScore": 8.15,
+    "overallRating": 88.84,
+    "enabledStatus": 1,
+    "regulatoryInfo":[
+{
+  "regulatoryLevel":5,
+  "area": "英国",
+  "regulatoryAbbreviation": "FCA",
+  "regulatoryAuthority":"英国金融行为监管局",
+  "regulatoryStatus": 1
+}]
+}
+}

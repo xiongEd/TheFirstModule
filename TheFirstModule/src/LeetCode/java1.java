@@ -197,6 +197,14 @@ public class java1 {
         int[]asdaf2 = asdaf1;
         asdaf1[1] = 5;
         System.out.println(asdaf2[1]);
+
+        int dada = (int) (1e9 + 7);
+        System.out.println(Math.log(1e9 + 7) / Math.log(3));
+        System.out.println(Math.pow(3, 333));
+
+
+
+
     }
     public static void func1(int[] a){
         a[1] = 10;

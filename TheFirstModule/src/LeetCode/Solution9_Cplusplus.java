@@ -18,7 +18,19 @@ package LeetCode;
 解释: 从右向左读, 为 01 。因此它不是一个回文数。
  */
 public class Solution9_Cplusplus {
-    /*
+
+    /* first
+    bool isPalindrome(int x) {
+        long exchange = 0, temp = x;
+        while (temp > 0) {
+            exchange = exchange *10 + temp % 10;
+            temp /= 10;
+        }
+        return exchange == x;
+    }
+     */
+
+    /* second
     public:
     bool isPalindrome(int x) {
         if(x < 0)
