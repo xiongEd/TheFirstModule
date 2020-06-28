@@ -31,78 +31,77 @@ LRUCache cache = new LRUCache( 2  缓存容量  );
         cache.get(4);       // 返回  4
  */
 public class Solution146 {
-
-}
-class LinkedListNode {
-     int key;
-     int value;
-     LinkedListNode next;
-     LinkedListNode pre;
-    public LinkedListNode(int a, int b) {
-        this.key = a;
-        this.value = b;
-    }
-}
-
-class LRUCache {
-    private Map<Integer, LinkedListNode> hashMap;
-    private LinkedListNode head;
-    private LinkedListNode tail;
-    private int capacity;
-
-    public LRUCache(int capacity) {
-        head = new LinkedListNode(0,0);
-        tail = new LinkedListNode(0,0);
-        head.next = tail;
-        tail.pre = head;
-        this.capacity = capacity;
-        hashMap = new HashMap<>();
-    }
-
-    public int get(int key) {
-        LinkedListNode node = hashMap.getOrDefault(key, null);
-        if (node == null) {
-            return -1;
+    class LinkedListNode {
+        int key;
+        int value;
+        LinkedListNode next;
+        LinkedListNode pre;
+        public LinkedListNode(int a, int b) {
+            this.key = a;
+            this.value = b;
         }
-        moveToHead(node);
-        return node.value;
     }
 
-    public void put(int key, int value) {
-        if (hashMap.containsKey(key)) {
-            LinkedListNode node = hashMap.get(key);
+    class LRUCache {
+        private Map<Integer, LinkedListNode> hashMap;
+        private LinkedListNode head;
+        private LinkedListNode tail;
+        private int capacity;
+
+        public LRUCache(int capacity) {
+            head = new LinkedListNode(0,0);
+            tail = new LinkedListNode(0,0);
+            head.next = tail;
+            tail.pre = head;
+            this.capacity = capacity;
+            hashMap = new HashMap<>();
+        }
+
+        public int get(int key) {
+            LinkedListNode node = hashMap.getOrDefault(key, null);
+            if (node == null) {
+                return -1;
+            }
             moveToHead(node);
-            node.value = value;
-            return;
+            return node.value;
         }
 
-        LinkedListNode node = new LinkedListNode(key, value);
+        public void put(int key, int value) {
+            if (hashMap.containsKey(key)) {
+                LinkedListNode node = hashMap.get(key);
+                moveToHead(node);
+                node.value = value;
+                return;
+            }
 
-        if (hashMap.size() < capacity) {
-            AddToHead(node);
-        } else {
-            AddToHead(node);
-            deleteFromeTail();
+            LinkedListNode node = new LinkedListNode(key, value);
+
+            if (hashMap.size() < capacity) {
+                AddToHead(node);
+            } else {
+                AddToHead(node);
+                deleteFromeTail();
+            }
+            hashMap.put(key, node);
         }
-        hashMap.put(key, node);
-    }
 
-    private void moveToHead(LinkedListNode node) {
-        node.next.pre = node.pre;
-        node.pre.next = node.next;
-        AddToHead(node);
-    }
+        private void moveToHead(LinkedListNode node) {
+            node.next.pre = node.pre;
+            node.pre.next = node.next;
+            AddToHead(node);
+        }
 
-    private void AddToHead(LinkedListNode node) {
-        node.next = head.next;
-        node.next.pre = node;
-        head.next = node;
-        node.pre = head;
-    }
+        private void AddToHead(LinkedListNode node) {
+            node.next = head.next;
+            node.next.pre = node;
+            head.next = node;
+            node.pre = head;
+        }
 
-    private void deleteFromeTail() {
-        hashMap.remove(tail.pre.key);
-        tail.pre = tail.pre.pre;
-        tail.pre.next = tail;
+        private void deleteFromeTail() {
+            hashMap.remove(tail.pre.key);
+            tail.pre = tail.pre.pre;
+            tail.pre.next = tail;
+        }
     }
 }
